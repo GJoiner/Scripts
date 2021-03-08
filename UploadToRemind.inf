@@ -1,0 +1,18 @@
+#Automatically abort script on errors 
+option batch abort
+#Overwrite files without confirmation
+option confirm off
+#Connect pre-configured connection [Remind]
+open "Remind"
+#Upload the files - Don't enable resume support 
+put "E:\Data\Remind\Schools.csv" "schools.csv"
+put "E:\Data\Remind\teachers.csv" "teachers.csv"
+put "E:\Data\Remind\students.csv" "students.csv"
+put "E:\Data\Remind\classes.csv" "classes.csv"
+put "E:\Data\Remind\enrollments.csv" "enrollments.csv"
+#Get a list of current files to see check for good upload and any non-processed files
+ls
+#Close the connection
+close
+#Bye
+exit
